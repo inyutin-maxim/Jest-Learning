@@ -54,7 +54,7 @@ describe('calc', () => {
 		test('calc.multiply(5, -7) = -35', () => {
 			expect(this.calc.multiply(5, -7)).toBe(-35);
 		});
-		test('calc.multiply(-5, -7) = -35', () => {
+		test('calc.multiply(-5, -7) = 35', () => {
 			expect(this.calc.multiply(-5, -7)).toBe(35);
 		});
 	});
