@@ -1,3 +1,4 @@
+//noinspection TypeScriptPreferShortImport
 import { Calc } from './calc';
 
 describe('calc', () => {
@@ -8,17 +9,17 @@ describe('calc', () => {
 		test('calc.sum(1, 2) = 3', () => {
 			expect(this.calc.sum(1, 2)).toBe(3);
 		});
-		
 		test('calc.sum(5, 7) = 12', () => {
 			expect(this.calc.sum(5, 7)).toBe(12);
 		});
-		
 		test('calc.sum(-5, 7) = 2', () => {
 			expect(this.calc.sum(-5, 7)).toBe(2);
 		});
-		
 		test('calc.sum(5, -7) = -2', () => {
 			expect(this.calc.sum(5, -7)).toBe(-2);
+		});
+		test('calc.sum(-5, -7) = -12', () => {
+			expect(this.calc.sum(-5, -7)).toBe(-12);
 		});
 	});
 	
@@ -35,6 +36,9 @@ describe('calc', () => {
 		test('calc.minus(5, -7) = 12', () => {
 			expect(this.calc.minus(5, -7)).toBe(12);
 		});
+		test('calc.minus(-5, -7) = 2', () => {
+			expect(this.calc.minus(-5, -7)).toBe(2);
+		});
 	});
 	
 	describe('multiply method', () => {
@@ -50,6 +54,9 @@ describe('calc', () => {
 		test('calc.multiply(5, -7) = -35', () => {
 			expect(this.calc.multiply(5, -7)).toBe(-35);
 		});
+		test('calc.multiply(-5, -7) = -35', () => {
+			expect(this.calc.multiply(-5, -7)).toBe(35);
+		});
 	});
 	
 	describe('division method', () => {
@@ -64,6 +71,9 @@ describe('calc', () => {
 		});
 		test('calc.division(25, 5) = 5', () => {
 			expect(this.calc.division(25, 5)).toBe(5);
+		});
+		test('calc.division(-25, -5) = 5', () => {
+			expect(this.calc.division(-25, -5)).toBe(5);
 		});
 	});
 });
